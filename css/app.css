@@ -1,0 +1,164 @@
+#blazor-error-ui{
+    visibility:collapse;
+    width:0px;
+    display:none;
+
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+#app {
+    width: 100%;
+}
+body{
+    box-sizing:border-box;
+    background-color: #1e1e1e;
+    color: white;
+    height:100%;
+    display:flex;
+    width:100%;
+}
+main{
+    display:flex;
+    height:100%;
+    width:100%;
+}
+
+#MainDiv{
+    display:flex;
+    flex-grow:1;
+    width:100%;
+}
+#PotatoButton{
+    width:450px;
+    background-image:url(../Images/soilTexture.jpg);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    border: 2px solid #6e6e6e;
+    border-radius:15px;
+}
+#Page {
+    width: calc(100% - 750px);
+    border: 2px solid #6e6e6e;
+    border-radius: 15px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #5e5e5eFF #00000000;
+}
+#Buildings {
+    width: 300px;
+    background-color: #151515;
+    height: 100%;
+    border: 2px solid #6e6e6e;
+    border-radius: 15px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #5e5e5eFF #00000000;
+    
+}
+
+#potatocount{
+    align-items:center;
+    display:inline;
+    text-align:center;
+}
+
+#bigpotato {
+    margin:0px;
+    padding:0px;
+    position:relative;
+    width:100%;
+    top:calc(50% - 200px);
+}
+
+
+#Buildings .Building{
+    display:flex;
+    background-image: url(../Images/rockTexture.jpg);
+    border-radius: 10px;
+    margin: 3px;
+}
+
+
+#Buildings .Building .BuildingIcon{
+    border: 2px solid black;
+    width: 72px;
+    height:72px;
+    border-radius:10px;
+    margin:3px;
+}
+#Buildings .Building .BuildingTexts{
+    display:flex;
+    width:100%;
+    }
+
+    #Buildings .Building .BuildingTexts .BuildingTextsLeft{
+        flex-grow:1;
+    }
+#Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsName {
+        font-size: 2em;
+    }
+#Buildings .Building .BuildingTexts .BuildingTextsRight{
+    display:flex;
+    align-items:center;
+}
+    #Buildings .Building .BuildingTexts .BuildingTextsRight .BuildingTextsAmount{
+        font-size:2em;
+        text-align:end;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .loading-progress {
+        position: relative;
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        margin: 20vh auto 1rem auto;
+    }
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }
