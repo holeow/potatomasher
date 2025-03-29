@@ -8,6 +8,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    touch-action: manipulation;
 }
 html {
     height: 100%;
@@ -52,6 +53,36 @@ main{
     scrollbar-width: thin;
     scrollbar-color: #5e5e5eFF #00000000;
 }
+@media screen and (orientation:portrait) {
+    #PotatoButton {
+        width: 290px;
+        background-image: url(../Images/soilTexture.jpg);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid #6e6e6e;
+        border-radius: 15px;
+    }
+    #Buildings {
+        width: 200px;
+        background-color: #151515;
+        height: 100%;
+        border: 2px solid #6e6e6e;
+        border-radius: 15px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #5e5e5eFF #00000000;
+    }
+    #Page {
+        width: calc(100% - 490px);
+        border: 2px solid #6e6e6e;
+        border-radius: 15px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #5e5e5eFF #00000000;
+    }
+}
+
 #Buildings {
     width: 300px;
     background-color: #151515;
@@ -115,7 +146,14 @@ main{
     }
 
 
+    #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsPrice{
+        color : red;
 
+    }
+
+    #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsPrice.CanBuyBuilding {
+        color: greenyellow;
+    }
 
 
 
