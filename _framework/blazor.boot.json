@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Potato Masher",
   "resources": {
-    "hash": "sha256-a9uN4KxbzrKjmPO1wTBRQenNMMXJzcreB0ksQuolaJ8=",
+    "hash": "sha256-FtphOM/sXv44QO2hHCcM86m7bOOZTFl63FEAKE47+zs=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
     },
@@ -34,7 +34,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-Bi1hyBMWneH/ByWbqT/pNe0B7I/NQFklzD2g3Whdqlk=",
       "Microsoft.JSInterop.wasm": "sha256-/UDU/a22nYNWHSJretwtuHflSN4Z8j8HeEorLjyrHDA=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-GsVw42I3DGzgLTnrD2A9JafVYLHVkyB3Qqe2LyDlYm8=",
-      "Potato Masher.wasm": "sha256-VwjC/l5+KCS9fLqXqqnuYaAkT9IRs4pFPkTvYKBe7mg=",
+      "Potato Masher.wasm": "sha256-XAMwjF34HhiFqLfoHogEqFMis/65HVZOABqkqt61XKs=",
       "System.Collections.Concurrent.wasm": "sha256-sNjd6LVzgvN0t7WLTD3IR6234ZdWF4WrKttFZTcLtME=",
       "System.Collections.wasm": "sha256-Zmx6Z+XptLrEoSAIHjU4EtdjLNNW6Xn9RRMblFCSDZs=",
       "System.ComponentModel.wasm": "sha256-KJ4vSyD4uZiNAzX16JFlSagNNsiKqkpuxbZRPNjKdR8=",
