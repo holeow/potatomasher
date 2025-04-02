@@ -59,6 +59,7 @@ main{
     position : absolute;
 
     transition : transform 0.6s ease-in-out;
+    z-index:5;
 }
 #PotatoButtonDisplay {
     position: fixed;
