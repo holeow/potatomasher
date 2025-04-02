@@ -1,3 +1,13 @@
+.appearOnMobileOnly {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .appearOnMobileOnly {
+        display: initial;
+    }
+}
+
 #blazor-error-ui{
     visibility:collapse;
     width:0px;
@@ -32,59 +42,83 @@ main{
 }
 
 #MainDiv{
+    position:relative;
     display:flex;
     flex-grow:1;
     width:100%;
+    overflow-x:clip;
 }
 #PotatoButton{
-    width:450px;
+    width:33%;
     background-image:url(../Images/soilTexture.jpg);
     height:100%;
     display:flex;
     flex-direction:column;
     border: 2px solid #6e6e6e;
     border-radius:15px;
+    position : absolute;
+
+    transition : transform 0.6s ease-in-out;
 }
-#Page {
-    width: calc(100% - 750px);
+#PotatoButtonDisplay {
+    position: fixed;
+    transition: left 0.6s ease-in-out;
+    z-index: 10;
+}
+
+#BuildingsButtonDisplay {
+    position: fixed;
+    transition: right 0.6s ease-in-out;
+    z-index: 10;
+}
+    #Page {
+    width: calc( 67% - min(30%, 250px) );
     border: 2px solid #6e6e6e;
     border-radius: 15px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #5e5e5eFF #00000000;
+    position: absolute;
+    left: 33%;
+    height: 100%
 }
-@media screen and (orientation:portrait) {
-    #PotatoButton {
-        width: 290px;
-        background-image: url(../Images/soilTexture.jpg);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border: 2px solid #6e6e6e;
-        border-radius: 15px;
+
+@media (max-width: 800px){
+    #Page{
+        width : 100%;
+        left:0%;
     }
-    #Buildings {
-        width: 200px;
-        background-color: #151515;
-        height: 100%;
-        border: 2px solid #6e6e6e;
-        border-radius: 15px;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-        scrollbar-color: #5e5e5eFF #00000000;
+
+    #PotatoButton{
+        width:40%;
     }
-    #Page {
-        width: calc(100% - 490px);
-        border: 2px solid #6e6e6e;
-        border-radius: 15px;
-        overflow-y: scroll;
-        scrollbar-width: thin;
-        scrollbar-color: #5e5e5eFF #00000000;
+
+    #PotatoButton.closed{
+        transform : translateX(-100%);
+        
+    }
+
+    #PotatoButtonDisplay {
+        
+        left: 40%;
+        top: 90%;
+    }
+    #PotatoButtonDisplay.closed {
+        left: 0%;
+       
+    }
+    #BuildingsButtonDisplay {
+        right:50%;
+        top:60%;
+    }
+    #BuildingsButtonDisplay.closed {
+        right: 0%;
     }
 }
 
+
 #Buildings {
-    width: 300px;
+    width: min( max(30%, 180px), 250px);
     background-color: #151515;
     height: 100%;
     border: 2px solid #6e6e6e;
@@ -92,7 +126,26 @@ main{
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #5e5e5eFF #00000000;
+    position: absolute;
+    right: 0px;
+    transition: transform 0.6s ease-in-out;
 }
+
+@media (max-width:800px){
+    #Buildings {
+        width: 50%;
+        overflow-x: clip;
+    }
+
+    #Buildings.closed {
+        transform: translateX(100%);
+
+    }
+}
+
+
+
+
 
 #potatocount{
     align-items:center;
@@ -127,11 +180,22 @@ main{
     margin:3px;
     user-select:none;
 }
+
+@media (max-width:500px){
+    #Buildings .Building .BuildingIcon {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        margin: 3px;
+        user-select: none;
+    }
+}
 #Buildings .Building .BuildingTexts{
     display:flex;
     width:100%;
     user-select: none;
     }
+
 
 #Buildings .Building .BuildingTexts .BuildingTextsLeft{
         flex-grow:1;
@@ -139,6 +203,11 @@ main{
 #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsName {
         font-size: 1.3em;
     }
+@media (max-width:500px) {
+    #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsName {
+        font-size: 1.0em;
+    }
+}
 #Buildings .Building .BuildingTexts .BuildingTextsRight{
     display:flex;
     align-items:center;
@@ -148,23 +217,58 @@ main{
         text-align:end;
         align-self:flex-start;
     }
-
+@media (max-width:500px) {
+    #Buildings .Building .BuildingTexts .BuildingTextsRight .BuildingTextsAmount {
+        font-size: 1.5em;
+        text-align: end;
+        align-self: flex-start;
+    }
+}
 
 #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsPrice{
         color : red;
-
+        background-color: #1e1e1e;
+        padding: 2px 5px 2px 5px;
+        border: 2px solid lightgrey;
+        border-radius: 4px;
+        margin-top:2px;
+        margin-bottom : 2px;
+        display:inline-block;
     }
+@media (max-width:500px) {
+    #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsPrice {
+        padding: 1px 2px 1px 2px;
+        border: 2px solid lightgrey;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        display: inline-block;
+        font-size:0.8em;
+    }
+}
+
+.BuildingBestPayback{
+    height : 10px;
+    width : 10px;
+    background-color : cyan;
+    display : inline-block;
+    margin-left : 4px;
+    
+}
+
+.hidden {
+    visibility : hidden;
+}
 
 #Buildings .Building .BuildingTexts .BuildingTextsLeft .BuildingTextsPrice.CanBuyBuilding {
-        color: greenyellow;
-    }
+    color: greenyellow;
+}
 
 #MakeSureBuildingIsScrollable{
     height:500px;
 }
 
 .BuildingTooltip{
-    position:absolute;
+    position:fixed;
     background-color:#151515;
     height:250px;
     width:350px;
@@ -175,6 +279,12 @@ main{
     border-radius:10px;
     display:flex;
     flex-direction:column;
+}
+@media(max-width: 800px){
+    .BuildingTooltip {
+        transform: translate(-150px);
+        width: 250px;
+    }
 }
 
 .buildingTooltipHide{
