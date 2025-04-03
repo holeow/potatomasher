@@ -280,16 +280,41 @@ main{
     border-radius:10px;
     display:flex;
     flex-direction:column;
+    padding-left:4px;
 }
 @media(max-width: 800px){
     .BuildingTooltip {
-        transform: translate(-150px);
+        transform: translate(-250px);
         width: 250px;
     }
 }
-
+@media(max-width: 500px) {
+    .BuildingTooltip {
+        transform: translate(-200px);
+        width: 200px;
+        font-size:0.8em;
+    }
+}
+@media(max-width: 400px) {
+    .BuildingTooltip {
+        transform: translate(-150px);
+        width: 150px;
+        font-size: 0.6em;
+    }
+}
 .buildingTooltipHide{
     display:none;
+}
+@media(max-width: 800px) {
+    .buildingTooltipShow {
+        display: none;
+    }
+    .buildingTooltipShowMobile {
+        display:flex;
+    }
+    .buildingTooltipHideMobile {
+        display:none;
+    }
 }
 .CheapestBuilding{
     color: cyan;
