@@ -166,11 +166,26 @@ main{
 
 
 
-#potatocount{
-    align-items:center;
-    display:inline;
+#potatocountMobile{
+    display:none;
     text-align:center;
 }
+#potatoCountDesktop {
+    display: block;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+@media (max-width : 800px){
+    #potatocountMobile {
+        display: inline;
+        text-align: center;
+    }
+    #potatoCountDesktop {
+        display: none;
+    }
+}
+
 #PotatoButtonPPS{
     text-align:center;
 }
@@ -183,7 +198,9 @@ main{
     top:calc(50% - 200px);
     user-select:none;
 }
-
+#bigpotato:active{
+    filter:brightness(80%);
+}
 
 #Buildings .Building{
     display:flex;
@@ -490,17 +507,105 @@ main{
     }
 }
 
-.upgradeModalClosed {
-    display: none;
+.upgradeBuyModalCloseButton{
+    margin-left:auto;
+    width:33px;
+    height:33px;
+    background-color:black;
+    color:white;
 }
 
-    .loading-progress {
-        position: relative;
-        display: block;
-        width: 8rem;
-        height: 8rem;
-        margin: 20vh auto 1rem auto;
+.upgradeBuyButtonMobile{
+    color:white;
+    background-color:black;
+}
+.upgradeModalDivPictureAndButton{
+    display:flex;
+    justify-content:space-between;
+}
+    .upgradeModalDivPictureAndButton img{
+        height:64px;
+        width:64px;
+        border: 2px solid white;
+        border-radius: 10px;
     }
+
+    .upgradeModalClosed {
+        display: none;
+    }
+
+
+
+
+
+.MysticalPotatoHolder{
+    position:fixed;
+    z-index:1000;
+    height:100%;
+    width:100%;
+    
+    pointer-events:none;
+}
+
+.mysticalPotatoContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    --border: 5px solid red;
+    z-index: 1010;
+    pointer-events:auto;
+    transition: opacity 5s linear;
+    opacity : 100%;
+}
+
+.mysticalPotatoGravity {
+    height: 100%;
+    position: absolute;
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+.mysticalPotatoMain{
+    position:absolute;
+    height:60%;
+    left:30%;
+    top:18%;
+}
+
+
+.MysticalPotatoInvisible{
+    visibility:hidden;
+    opacity:0%;
+    pointer-events:none;
+}
+.MysticalPotatoDisappearing{
+    opacity:0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
 
         .loading-progress circle {
             fill: none;
