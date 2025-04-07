@@ -48,6 +48,12 @@ main{
     width:100%;
     flex-direction:column;
 }
+#MouseMoveDetector{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
 #Banner {
     height: 35px;
     width: 100%;
@@ -586,14 +592,49 @@ main{
 }
 
 
+#Console{
+    margin-top:auto;
+    height: 300px;
+    overflow-y:scroll;
+    display:flex;
+    flex-direction:column;
+}
 
 
+#FloatingMessagesHolder {
+    position: fixed;
+    z-index: 1500;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+#BackgroundFloatingMessageDetector {
+    position: fixed;
+    z-index: -1500;
+    height: 100%;
+    width: 100%;
+}
 
+.FloatingMessage {
+    position: absolute;
+    transition: transform 1s linear, opacity 1s linear;
+    pointer-events: none;
+}
+.FloatingMessageGoingUp{
+    transform : translateY(-500%);
+    opacity : 0%;
+}
 
+#PotatoFeverIconContainer{
+    position:absolute;
 
-
-
-
+    height:48px;
+    top:64px
+}
+#PotatoFeverIconImage{
+    height:36px;
+    text-align:center;
+}
 
 
 
