@@ -68,11 +68,11 @@ main{
     margin-left:auto;
 }
 
-@media(max-width:500px){
+@media(max-width:500px) {
     #BannerDisclaimer {
         font-size: 12px;
     }
-
+}
     @media(max-width:400px) {
         #BannerDisclaimer {
             font-size: 8px;
