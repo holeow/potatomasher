@@ -89,14 +89,15 @@ main{
     overflow-x:clip;
 }
 #PotatoButton{
-    width:33%;
-    background-image:url(../Images/soilTexture.jpg);
+    width:min(33%, 400px);
+    background-image:url(../Images/dirt128.jpg);
     height:100%;
     display:flex;
     flex-direction:column;
     border: 2px solid #6e6e6e;
     border-radius:15px;
     position : absolute;
+    align-items:center;
 
     transition : transform 0.6s ease-in-out;
     z-index:5;
@@ -112,14 +113,14 @@ main{
     transition: right 0.6s ease-in-out;
     z-index: 10;
 }
-    #Page {
-    width: calc( 67% - min(30%, 250px) );
+#Page {
+    width: calc( max( 67% - min(70%,250px), calc(calc(100% - 400px) - min(70%,250px)) ));
     border: 2px solid #6e6e6e;
     border-radius: 15px;
     scrollbar-width: thin;
     scrollbar-color: #5e5e5eFF #00000000;
     position: absolute;
-    left: 33%;
+    left: min(33%, 400px );
     height: 100%
 }
 
@@ -211,13 +212,19 @@ main{
     text-align:center;
 }
 
+#PotatoButtonBuffs{
+    width:100%;
+    display:flex;
+}
+
 #bigpotato {
     margin:0px;
     padding:0px;
-    position:relative;
-    width:100%;
+    position:absolute;
+    width:min(100%, 400px);
     top:calc(50% - 200px);
     user-select:none;
+    margin-left:auto;
 }
 #bigpotato:active{
     filter:brightness(80%);
@@ -225,7 +232,7 @@ main{
 
 #Buildings .Building{
     display:flex;
-    background-image: url(../Images/rockTexture.jpg);
+    background-image: url(../Images/rock128.jpg);
     border-radius: 10px;
     margin: 3px;
     position:relative;
@@ -607,12 +614,15 @@ main{
 }
 
 
-#Console{
-    margin-top:auto;
+#Console {
+    margin-top: auto;
     height: 300px;
-    overflow-y:scroll;
-    display:flex;
-    flex-direction:column;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #5e5e5eFF #00000000;
 }
 
 
