@@ -121,7 +121,8 @@ main{
     scrollbar-color: #5e5e5eFF #00000000;
     position: absolute;
     left: min(33%, 400px );
-    height: 100%
+    height: 100% ;
+    background-image:url(../Images/rubber256.jpg);
 }
 
 @media (max-width: 800px){
