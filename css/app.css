@@ -713,9 +713,12 @@ main{
 
 
 body {
-    overscroll-behavior: contain;
+    overscroll-behavior: none;
 }
 
 html {
-    overscroll-behavior: contain;
+    overscroll-behavior: none;
+}
+* {
+    overscroll-behavior: none;
 }
