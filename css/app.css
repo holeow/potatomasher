@@ -674,8 +674,16 @@ main{
     display:block;
 }
 
+#refresh{
+    background-color: #00000000;
+    height:24px;
+    width:24px;
 
+}
 
+#refresh img{
+    height:100%;
+}
 
 
 .loading-progress {
