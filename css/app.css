@@ -710,3 +710,12 @@ main{
         .loading-progress-text:after {
             content: var(--blazor-load-percentage-text, "Loading");
         }
+
+
+body {
+    overscroll-behavior: contain;
+}
+
+html {
+    overscroll-behavior: contain;
+}
