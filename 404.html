@@ -15,16 +15,7 @@
         function scrollToEnd(textarea) {
             textarea.scrollTop = textarea.scrollHeight;
         }
-        var gameVersion = 4;
-        // link:Home.razor:"public int version"
-        // link:app.css:"--version"
-        function forceReload(version) {
-            if (version != gameVersion) window.location.reload();
-
-            var style = window.getComputedStyle(document.body);
-            var cssversion = style.getPropertyValue('--version');
-            if (cssversion != gameVersion) window.location.reload();
-        }
+        
     </script>
 </head>
 
