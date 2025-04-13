@@ -1,3 +1,9 @@
+:root{
+    --version: 3;
+
+}
+/* link:index.html:"var gameVersion" */
+
 .appearOnMobileOnly {
     display: none;
 }
@@ -688,6 +694,7 @@ main{
     background-color: #00000000;
     height:24px;
     width:24px;
+    border: 2px solid cyan;
 
 }
 
