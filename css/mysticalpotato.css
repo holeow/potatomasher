@@ -1,0 +1,48 @@
+﻿.MysticalPotatoHolder {
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.mysticalPotatoContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    --border: 5px solid red;
+    z-index: 1010;
+    pointer-events: auto;
+    transition: opacity 5s linear;
+    opacity: 100%;
+}
+
+.mysticalPotatoGravity {
+    height: 100%;
+    position: absolute;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mysticalPotatoMain {
+    position: absolute;
+    height: 60%;
+    left: 30%;
+    top: 18%;
+}
+
+
+.MysticalPotatoInvisible {
+    visibility: hidden;
+    opacity: 0%;
+    pointer-events: none;
+}
+
+.MysticalPotatoDisappearing {
+    opacity: 0%;
+}

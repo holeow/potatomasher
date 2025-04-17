@@ -1,0 +1,123 @@
+﻿.appearOnMobileOnly {
+    display: none;
+}
+
+.inlineblock {
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    .appearOnMobileOnly {
+        display: initial;
+    }
+
+    .dontAppearOnMobile {
+        display: none;
+    }
+}
+
+#blazor-error-ui {
+    visibility: collapse;
+    width: 0px;
+    display: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#app {
+    width: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    color: white;
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+
+#MouseMoveDetector {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#Banner {
+    height: 35px;
+    width: 100%;
+    display: block;
+    background: linear-gradient(180deg, rgba(32,32,32,1) 0%, rgba(55,55,55,1) 53%, rgba(32,32,32,1) 100%);
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+#BannerDisclaimer {
+    margin-left: auto;
+}
+
+@media(max-width:500px) {
+    #BannerDisclaimer {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:400px) {
+    #BannerDisclaimer {
+        font-size: 8px;
+    }
+}
+
+#MainDivContainer {
+    height: 100%;
+}
+
+#MainDiv {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    overflow-x: clip;
+}
+#potatocountMobile {
+    display: none;
+    text-align: center;
+}
+@media (max-width : 800px) {
+    #potatocountMobile {
+        display: inline;
+        text-align: center;
+    }
+}
+#refresh {
+    background-color: #00000000;
+    height: 24px;
+    width: 24px;
+    border: 2px solid cyan;
+}
+
+    #refresh img {
+        height: 100%;
+    }

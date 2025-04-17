@@ -5,20 +5,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Potato Masher</title>
-    <base href="https://holeow.github.io/potatomasher/" /><!--For normal publishing, change to "/" for github use "https://holeow.github.io/potatomasher/"-->
+    <base href="https://holeow.github.io/potatomasher/" /><!--//! For normal publishing, set to"/", for github use "https://holeow.github.io/potatomasher/" . Change that after publishing and also do that in the 404.html-->
+    <!--//Chapter CSS-->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/PotatoButton.css" />
+    <link rel="stylesheet" href="css/page.css" />
+    <link rel="stylesheet" href="css/buildings.css" />
+    <link rel="stylesheet" href="css/upgrade.css" />
+    <link rel="stylesheet" href="css/mysticalpotato.css" />
+    <!--//?Base app css-->
     <link rel="stylesheet" href="css/app.css?version=5" />
-    <!--<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />-->
-    <link rel="icon" type="image/png" href="favicon.png" />
     <link href="Potato Masher.styles.css" rel="stylesheet" />
-    <!--Script for the console-->
+
+    <!--//? Favicon-->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!--//Chapter Javascript-->
+    <!--Script for the console link:gameConsole.razor -->
     <script type="text/javascript">
         function scrollToEnd(textarea) {
             textarea.scrollTop = textarea.scrollHeight;
         }
-        
+
     </script>
 </head>
-
+<!--//! Do not touch Body, this is loading screen and webassembly content.-->
 <body>
     <div id="app">
         <svg class="loading-progress">
