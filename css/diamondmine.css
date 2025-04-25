@@ -1,0 +1,26 @@
+﻿#DiamondBoard {
+    background-color: darkolivegreen;
+    width: 70%;
+    max-height: 65vh;
+    max-width: 65vh;
+    aspect-ratio: 1/1;
+    position: relative;
+    
+    margin-left:auto;
+    margin-right:auto;
+    touch-action:none;
+    /*margin:10% 10% 0 0;*/
+}
+
+.diamond{
+    height:10%;
+    width:10%;
+    position:absolute;
+    pointer-events:none;
+    touch-action : none;
+    transition: left 0.3s ease-in-out, top 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    opacity:1;
+}
+    .diamond.transparent {
+        opacity: 0;
+    }
