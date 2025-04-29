@@ -34,6 +34,9 @@
     position: absolute;
     transition: transform 1s linear, opacity 1s linear;
     pointer-events: none;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-shadow: black 1px 0 10px;
 }
 .FloatingMessageGoingUp{
     transform : translateY(-500%);

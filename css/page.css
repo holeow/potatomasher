@@ -52,3 +52,9 @@
     height: calc(100% - 100px);
     padding-left: 8px;
 }
+
+.diamondstats {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+}
